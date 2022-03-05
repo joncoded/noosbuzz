@@ -1,5 +1,5 @@
 import React from "react"
-import SearchForm from "./components/SearchForm"
+import Header from "./components/Header"
 import NewsList from "./components/NewsList"
 import Pagination from "./components/Pagination"
 import Footer from "./components/Footer"
@@ -8,7 +8,7 @@ function App() {
   return (
     <>
       <header className="header">
-        <SearchForm />
+        <Header />
         <Pagination />
       </header>
       <main>

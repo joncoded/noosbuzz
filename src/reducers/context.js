@@ -1,9 +1,9 @@
 import React, { useContext, useEffect, useReducer } from "react"
 
-import { SET_LOADING, SET_STORIES, REMOVE_STORY, HANDLE_PAGE, HANDLE_SEARCH } from "./actions"
+import { SET_LOADING, SET_STORIES, HANDLE_PAGE, HANDLE_SEARCH } from "./actions"
 import reducer from "./reducer"
 
-const API_ENDPOINT = "https://hn.algolia.com/api/v1/search?"
+const API_ENDPOINT = "https://hn.algolia.com/api/v1/search_by_date?"
 
 const initialState = {
   isLoading: true,
@@ -32,10 +32,6 @@ const AppProvider = ({ children }) => {
       console.log(error)
     }
   }
-
-  const removeStory = id => {
-    dispatch({ type: REMOVE_STORY, payload: id })
-  }
   const handleSearch = query => {
     dispatch({ type: HANDLE_SEARCH, payload: query })
   }
@@ -43,10 +39,10 @@ const AppProvider = ({ children }) => {
     dispatch({ type: HANDLE_PAGE, payload: value })
   }
   useEffect(() => {
-    fetchStories(`${API_ENDPOINT}query=${state.query}&page=${state.page}`)
+    fetchStories(`${API_ENDPOINT}tags=story&query=${state.query}&page=${state.page}`)
   }, [state.query, state.page])
 
-  return <AppContext.Provider value={{ ...state, removeStory, handleSearch, handlePage }}>{children}</AppContext.Provider>
+  return <AppContext.Provider value={{ ...state, handleSearch, handlePage }}>{children}</AppContext.Provider>
 }
 // make sure use
 export const useGlobalContext = () => {
