@@ -256,6 +256,7 @@ p {
   margin-bottom: 0.25rem;
   color: var(--cl-news-link);
   text-transform: lowercase;
+  word-break: break-word;
 }
 
 .news-item .main .title a:hover {
