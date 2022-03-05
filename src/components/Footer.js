@@ -11,12 +11,12 @@ const Footer = () => {
         mashup{" "}
       </p>
       <p>
-        stories pulled from the{" "}
+        item pulled from the{" "}
         <a href="https://hn.algolia.com/api" rel="noopener noreferrer" target="_blank">
           algolia hacker news api<span className="sr-only"> link opens in new tab</span>
         </a>
       </p>
-      <p>each stories must meet 100+ point threshold</p>
+      <p>each news item must have >100 points on hacker news</p>
     </>
   )
 }
