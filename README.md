@@ -3,6 +3,7 @@
 - a distraction-free news search tool in React
   - includes fixed-header pagination
   - fully accessible
+  - fully responsive design (css flex + grid)
 
 ## installation
 
