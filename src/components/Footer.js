@@ -16,6 +16,7 @@ const Footer = () => {
           algolia hacker news api<span className="sr-only"> link opens in new tab</span>
         </a>
       </p>
+      <p>each stories must meet 100+ point threshold</p>
     </>
   )
 }
