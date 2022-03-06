@@ -16,7 +16,7 @@ const Footer = ({ config }) => {
           algolia hacker news api<span className="sr-only"> link opens in new tab</span>
         </a>
       </p>
-      <p>each news item must have >100 points on hacker news</p>
+      <p>each news item must have at least 50 points on hacker news</p>
     </>
   )
 }
