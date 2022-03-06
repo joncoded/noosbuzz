@@ -1,19 +1,19 @@
 import React from "react"
 import { useGlobalContext } from "../reducers/context"
 
-const Pagination = () => {
+const Pagination = ({ config }) => {
   const { isLoading, page, nbPages, handlePage } = useGlobalContext()
 
   return (
     <div className="pagination">
       <button disabled={isLoading} onClick={() => handlePage("dec")}>
-        prev
+        {config.prev}
       </button>
       <p>
-        {page + 1} of {nbPages}
+        {page + 1} {config.of} {nbPages}
       </p>
       <button disabled={isLoading} onClick={() => handlePage("inc")}>
-        next
+        {config.next}
       </button>
     </div>
   )

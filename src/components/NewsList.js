@@ -18,7 +18,7 @@ const NewsList = () => {
               <div className="main">
                 <h2 className="title">
                   <a rel="noopener noreferrer" href={url} target="_blank">
-                    {title.replace(".", "")}
+                    {title}
                     <span className="sr-only"> link opens in new tab</span>
                   </a>
                 </h2>

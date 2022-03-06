@@ -1,7 +1,7 @@
 import React, { useState } from "react"
 import { useGlobalContext } from "../reducers/context"
 
-const SearchForm = () => {
+const SearchForm = ({ config }) => {
   const { query, handleSearch } = useGlobalContext()
   const [newQuery, setNewQuery] = useState(query)
 
@@ -23,7 +23,7 @@ const SearchForm = () => {
       <div className="form-heading">
         <h1>noosbuzz</h1>
         <label className="form-label" htmlFor="search">
-          distraction-free news search
+          {config.tagline}
         </label>
       </div>
       <div className="form-search">

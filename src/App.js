@@ -1,4 +1,5 @@
 import React from "react"
+import config from "./config"
 import Header from "./components/Header"
 import NewsList from "./components/NewsList"
 import Pagination from "./components/Pagination"
@@ -8,14 +9,14 @@ function App() {
   return (
     <>
       <header className="header">
-        <Header />
-        <Pagination />
+        <Header config={config} />
+        <Pagination config={config} />
       </header>
       <main>
         <NewsList />
       </main>
       <footer className="footer">
-        <Footer />
+        <Footer config={config} />
       </footer>
     </>
   )
