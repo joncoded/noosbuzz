@@ -248,7 +248,7 @@ p {
 .news-item .main {
   display: flex;
   flex-direction: column-reverse;
-  justify-content: start;
+  justify-content: flex-end;
 }
 
 .news-item .main .title a {
